@@ -1,0 +1,168 @@
+;;(defcfg
+;;  linux-dev /dev/input/by-path/platform-i8042-serio-0-event-kbd
+;;)
+
+;;(defcfg
+;;  linux-dev-names-include (
+;;    "Logitech MX Ergo"
+;;    "TPPS/2 Elan TrackPoint"
+;;    "Yubico YubiKey OTP+FIDO+CCID"
+;;    "LogiOps Virtual Input"
+;;    "SYNA8018:00 06CB:CE67 Mouse"
+;;    "Logitech MX Ergo Multi-Device Trackball "
+;;  )
+;;)
+;;(defcfg
+;;  linux-dev-names-include
+;;    "TPPS/2 Elan TrackPoint":"Logitech MX Ergo"
+;;)
+
+(defcfg process-unmapped-keys yes
+ windows-altgr add-lctl-release
+ ;;windows-interception-keyboard-hwids (
+ ;;"65, 0, 67, 0, 80, 0, 73, 0, 92, 0, 86, 0, 69, 0, 78, 0, 95, 0, 68, 0, 76, 0, 76, 0, 75, 0, 38, 0, 68, 0, 69, 0, 86, 0, 95, 0, 48, 0, 56, 0, 49, 0, 55, 0, 0, 0, 65, 0, 67, 0, 80, 0, 73, 0, 92, 0, 68, 0, 76, 0, 76, 0, 75, 0, 48, 0, 56, 0, 49, 0, 55, 0, 0, 0, 42, 0, 68, 0, 76, 0, 76, 0, 75, 0, 48, 0, 56, 0, 49, 0, 55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+ ;;)
+)
+
+(deflocalkeys-win
+  ü    186
+  +    187
+  #    191
+  ö    192
+  ß    219
+  ^    220
+  ´    221
+  ä    222
+  <    226
+)
+
+(deflocalkeys-linux
+  ì 13
+  ö 39
+  ä 40
+)
+
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret   del  end  pgdn  kp7  kp8  kp9  kp+
+  caps a    s    d    f    g    h    j    k    l    ;    '    \                          kp4  kp5  kp6
+  lsft 102d z    x    c    v    b    n    m    ,    .    /    rsft            up         kp1  kp2  kp3  kprt
+  lctl lmet lalt           spc                 ralt rmet cmp  rctl       left down rght  kp0  kp.
+)
+
+;; The first layer defined is the layer that will be active by default when
+;; kanata starts up. This layer is the standard QWERTY layout except for the
+;; backtick/grave key (@grl) which is an alias for a tap-hold key.
+;;
+;; There are currently a maximum of 25 layers allowed.
+(deflayer qwerty
+  caps  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret   del  end  pgdn  kp7  kp8  kp9  kp+
+  esc a    s    d    @f    g    h    @j    k    l    ;    '    \                          kp4  kp5  kp6
+  lsft 102d z    x    c    v    b    n    m    ,    .    /    rsft            up         kp1  kp2  kp3  kprt
+  lctl lmet lalt           @spc                 ralt rmet cmp  rctl       left down rght  kp0  kp.
+)
+
+(defalias
+  arr (layer-toggle arrows)
+  term (layer-toggle term)
+  spc (tap-hold $tap-time $hold-time spc @arr)
+)
+
+(defalias
+  f (tap-hold $tap-time $hold-time f lsft)
+  j (tap-hold $tap-time $hold-time j rsft)
+  d (tap-hold $tap-time $hold-time d @term)
+  a (tap-hold $tap-time $hold-time a lctl)
+  left C-left
+  rght C-rght
+  del  C-bspc
+)
+;; The dvorak layer remaps the keys to the dvorak layout. In addition there is
+;; another tap-hold key: @cap. This key retains caps lock functionality when
+;; quickly tapped but is read as left-control when held.
+(deflayer dvorak
+  caps  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
+  grv  1    2    3    4    5    6    7    8    9    0    @-    =    bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  q    w    e    r    t    y    u    i    o    p    @ü    ]    ret   del  end  pgdn  kp7  kp8  kp9  kp+
+  esc a    s    d    f    g    h    j    k    l    @ö   @ä    \                          kp4  kp5  kp6
+  lsft 102d z    x    c    v    b    n    m    ,    .    /    rsft            up         kp1  kp2  kp3  kprt
+  lctl @nav lalt           spc                 ralt rmet cmp  rctl       left down rght  kp0  kp.
+)
+
+
+(defvar
+  ;; Note: consider using different time values for your different fingers.
+  ;; For example, your pinkies might be slower to release keys and index
+  ;; fingers faster.
+  tap-time 10
+  hold-time 140
+)
+
+
+
+(deflayer arrows
+  _  _  _   _   _   _   _     _     _    _      _     _   _ _ _ _
+  _  _  _   _   _   _   _     _     _   S-left S-rght @-   _ _ _ _ _  _ _  _  _
+  _  _  @del   _   _   _   _     f12   _   _      _      @ü  _ _ _ _  _  _  _  _  _
+  _  _  _   _   _   _   @left down  up  @rght  @ö     @ä  _ _ _ _
+  _  _  _   _   _   _   _      _    _   _      _      _   _ _ _ _  _  _
+  _  _  _   _   _   _   _      _    _   _      _      _   _
+)
+
+(deflayer term
+  _  _  _   _   _   _   _    _    _   _    _  _  _        _ _ _
+  _  _  _   _   _   _   _    _    _   _    _  _    _    _  _  _ _  _ _  _  _
+  _  _  _   _   _   _   _    -    _   _    _  _    _    _   _  _  _  _  _  _  _
+  _  _  _   _   _   _   @lft -    -  @rht _  _    _                          _  _  _
+  _  _  _   _   _   _   _    _    _   _    _  _    _            _         _  _  _  _
+  _  _  _   _   _   _   _  _ _    _   _    _  _
+)
+
+
+(defalias nav (layer-while-held dvorak))
+
+(defalias
+  ä RA-q
+  ö RA-p
+  ü RA-y
+  - RA-s
+  lft C-S-tab
+  rht C-tab
+)
+
+;; defalias is used to declare a shortcut for a more complicated action to keep
+;; the deflayer declarations clean and aligned. The alignment in deflayers is not
+;; necessary, but is strongly recommended for ease of understanding visually.
+;;
+;; Aliases are referred to by `@<alias_name>`.
+;;(defalias
+;;  ;; tap: backtick (grave), hold: toggle layer-switching layer while held
+;;  grl (tap-hold 200 200 grv (layer-toggle layers))
+;;
+;;  ;; layer-switch changes the base layer.
+;;  dvk (layer-switch dvorak)
+;;  qwr (layer-switch qwerty)
+;;
+;;  ;; tap for capslk, hold for lctl
+;;  cap (tap-hold 200 200 caps lctl)
+;;)
+
+;; The `lrld` action stands for "live reload". This will re-parse everything
+;; except for linux-dev, meaning you cannot live reload and switch keyboard
+;; devices.
+;;
+;; The keys 1 and 2 switch the base layer to qwerty and dvorak respectively.
+;;
+;; Apart from the layer switching and live reload, all other keys are the
+;; underscore _ which means "transparent". Transparent means the base layer
+;; behaviour is used when pressing that key.
+;;(deflayer layers
+;;  _    @qwr @dvk lrld _    _    _    _    _    _    _    _    _    _
+;;  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;  _    _    _    _    _    _    _    _    _    _    _    _    _
+;;  _    _    _    _    _    _    _    _    _    _    _    _
+;;  _    _    _              _              _    _    _
+;;)
